@@ -1,0 +1,121 @@
+body{
+    overflow: hidden;
+}
+.box {
+    width: 800px;
+    height: 495px;
+    overflow: hidden;
+}
+
+.box > .login {
+    width: 285px;
+    height: 475px;
+    float: left;
+    padding: 10px;
+    background: #f5f5f5;
+}
+
+.box > .login > .logo {
+    height: 100px;
+    margin-top: 50px;
+}
+
+.box > .login > .logo > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.box > .login > .frame {
+    margin: 30px 0 40px 0;
+    position: relative;
+}
+.box > .login > .frame > i{
+    color: #2d2d35;
+    left: 35px;
+    position: absolute;
+    font-size: 20px;
+}
+.box > .login > .frame > i.id{
+    top:0;
+}
+.box > .login > .frame > i.password{
+    top:38px;
+}
+.box > .login > .frame > input {
+    width: 175px;
+    padding: 0 25px 0 50px;
+    height: 28px;
+    line-height: 28px;
+    border: none;
+    background: none;
+    display: block;
+    color: #6c6c79;
+    margin: 10px auto 10px auto;
+    border-bottom: 1px solid #2d2d35;
+}
+
+.box > .login > .frame > .btn {
+    width: 200px;
+    margin: 30px auto 0 auto;
+    overflow: hidden;
+}
+
+.box > .login > .frame > .btn > button {
+    width: 70px;
+    font-size: 12px;
+    height: 25px;
+    line-height: 22px;
+    color: #fdfffe;
+    border: none;
+    cursor: pointer;
+}
+
+.box > .login > .frame > .btn > .id-login {
+    float: left;
+    background: #2d2d35;
+}
+
+.box > .login > .frame > .btn > .weixin-login {
+    float: right;
+    background: #2e7e02;
+    padding-left: 30px;
+    width: 86px;
+    text-align: left;
+    position: relative;
+}
+
+.box > .login > .frame > .btn > .weixin-login > i {
+    position: absolute;
+    font-size: 22px;
+    top:2px;
+    left:4px
+}
+
+.box > .login > .log {
+    display: block;
+    height: 80px;
+    width: 250px;
+    margin-left:20px;
+    overflow-y: auto;
+    border-top:1px solid #c2c2c2;
+    padding: 10px;
+}
+
+.box > .login > .log > li {
+    color: #c2c2c2;
+    font-size: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+.box > .login > .log > li > i{
+    position: absolute;
+    top:-4px;
+    left:-4px;
+}
+
+.box > .pic {
+    width: 495px;
+    height: 495px;
+    background: url(img/bg.jpg) 0 0 / cover no-repeat;
+    float: right;
+}

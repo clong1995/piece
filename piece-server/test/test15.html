@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: left 1s ease,top 1s ease;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    let box = document.querySelector('#box');
+    box.onclick = e => {
+        box.style.left = '300px';
+        box.style.top = '300px';
+    }
+
+</script>
+</body>
+</html>

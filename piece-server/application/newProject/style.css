@@ -1,0 +1,33 @@
+html,body{
+    overflow: hidden;
+}
+body{
+    width: 340px;
+    height: 192px;
+}
+header{
+    background: #2c2d31;
+    border-bottom: 2px solid #212129;
+    height: 25px;
+    line-height: 25px;
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 0 10px;
+}
+header > .close{
+    font-size: 12px;
+    color:#cdcdcd;
+    float: right;
+    cursor: pointer;
+}
+main{
+    box-sizing: border-box;
+    padding: 15px;
+}
+.win >.win-item > select{
+    width: 200px;
+}
+
+.win >.win-item > input{
+    width: 180px;
+}

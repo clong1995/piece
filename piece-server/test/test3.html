@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<style type="text/css">
+    .abc {
+        margin: 200px auto;
+        position: relative;
+        width: 250px;
+        height: 130px;
+        overflow: hidden
+    }
+
+    .a {
+        width: 250px;
+        height: 130px;
+        display: block
+    }
+
+    .b {
+        display: block;
+        width: 250px;
+        height: 130px;
+        position: relative;
+        z-index: 3;
+        background-color: #000;
+        opacity: 0.8;
+        color: #fff;
+
+        transition: all .2s ease-in 0s;
+    }
+
+    .abc:hover .b {
+        transform: translate(0px, -130px);
+
+    }
+
+
+
+    .anim_fade_image {
+        position:absolute;
+        transition: opacity 1s ease-in-out;
+    }
+    .anim_fade_image:hover, .anim_fade_image_hover {
+        opacity:0;
+    }
+
+</style>
+<body>
+<div class="abc">
+
+    <a href= "http://www.baidu.com" class="a">
+    <img src="../images/about-1.jpg" width="250" height="130"> </img>
+    </a>
+    <a href= "http://www.baidu.com" class="b">
+    <span>设计师</span>
+    </a>
+
+</div>
+
+
+<img class="anim_fade_image" src="http://image.zhangxinxu.com/image/study/p/s200/ps6.jpg" />
+<img src="http://image.zhangxinxu.com/image/study/p/s200/ps4.jpg" />
+</body>
+</html>

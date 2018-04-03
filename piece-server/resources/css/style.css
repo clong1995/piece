@@ -1,0 +1,51 @@
+.win {
+
+}
+
+.win > .win-item {
+    margin-bottom: 10px;
+}
+
+.win > .win-item-btn {
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.win > .win-item > input,
+.win > .win-item > select {
+    border: none;
+    margin-left: 10px;
+    height: 24px;
+    line-height: 24px;
+    color: #353535;
+    padding: 0 10px;
+}
+
+.win > .win-item > input {
+
+}
+
+.win > .win-item > select {
+
+}
+
+.win > .win-item > button{
+    width: 70px;
+    height: 24px;
+    line-height: 22px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    background: none;
+    cursor: pointer;
+    font-size: 12px;
+    color:#cdcdcd;
+}
+
+.win > .win-item > select > option {
+
+}
+
+.win > .win-item > .error{
+    color:red;
+}

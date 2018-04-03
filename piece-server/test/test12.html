@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <input type="text">
+    <select>
+        <option>1</option>
+        <option>2</option>
+    </select>
+</div>
+<script>
+    let box = document.getElementById('box');
+    box.onkeyup = function (e) {
+        console.log(e.target.nodeName)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    'use strict';
+    class Man {
+        work() {
+            console.log("working");
+        }
+
+        $(){
+            for (let key of Reflect.ownKeys(Man.prototype)) {
+                console.log(key);
+            }
+        }
+    }
+
+    class Woman {
+        say() {
+            console.log("saying");
+        }
+    }
+
+    new Man().$();
+
+</script>
+</body>
+</html>

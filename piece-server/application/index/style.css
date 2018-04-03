@@ -1,0 +1,179 @@
+body {
+    overflow: hidden;
+}
+/*
+@keyframes fadeIn {
+    0% {
+        opacity: 0; !*初始状态 透明度为0*!
+    }
+    100% {
+        opacity: 1; !*结尾状态 透明度为1*!
+    }
+}
+
+body {
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+}*/
+
+/*顶部*/
+header {
+    background: #2c2d31;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #212129;
+    overflow: hidden;
+}
+
+/*logo*/
+.logo {
+    width: 90px;
+    height: 25px;
+    float: left;
+}
+
+.logo > .logo-img {
+    display: block;
+    height: 15px;
+    float: left;
+    border: none;
+    margin-top: 5px;
+}
+
+.logo > .logo-text {
+    display: block;
+    width: 100px;
+    height: 25px;
+    float: left;
+}
+
+/*控制*/
+.command {
+    height: 25px;
+    float: left;
+    font-size: 12px;
+}
+
+.command > div {
+    height: 25px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/*窗口控住*/
+.win-crl {
+    float: right;
+}
+
+.win-crl > i {
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.win-crl > i.win-close:hover {
+    color: red;
+}
+
+/*主体*/
+main {
+    width: 1366px;
+    height: calc(100% - 27px /* - 20px*/);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*左侧*/
+main > .left {
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+main > .left > h2 {
+    border-left: 2px solid #ffffff;
+    padding-left: 17px;
+    margin-top: 60px;
+    color: #ffffff;
+}
+
+main > .left > ul {
+    margin-top: 25px;
+}
+
+main > .left > ul > li {
+    border: 2px solid #cdcdcd;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 17px;
+    width: 140px;
+    border-radius: 17px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/*右侧*/
+main > .right {
+    float: right;
+    width: 1166px;
+    height: 100%;
+}
+
+main > .right > .tool-bar {
+    height: 20px;
+    line-height: 20px;
+    margin-top: 20px;
+}
+
+main > .right > .tool-bar > .show {
+    float: left;
+}
+
+main > .right > .tool-bar > .show > i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main > .right > .tool-bar > .record {
+    float: right;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #ffffff
+}
+
+main > .right > .project {
+    overflow-x: hidden;
+    margin-top: 20px;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+main > .right > .project > .item {
+    width: 220px;
+    height: 250px;
+    background: cadetblue;
+    margin: 0 10px 10px 0;
+    float: left;
+}
+
+@media screen and (max-width: 1440px) {
+    main {
+        width: 1024px;
+    }
+
+    main > .right {
+        width: 820px;
+    }
+
+    main > .right > .project > .item {
+        width: 190px;
+        height: 220px;
+    }
+}

@@ -1,0 +1,61 @@
+<html>
+<head>
+     <meta charset="utf-8">
+</head>
+<body>
+<script>
+    "use strict";
+    function mix(...mixins) {
+        class Mix {}
+        for (let mixin of mixins) {
+            //copyProperties(Mix, mixin);
+            copyProperties(Mix.prototype, mixin.prototype);
+        }
+        return Mix;
+    }
+    function copyProperties(target, source) {
+        for (let key of Reflect.ownKeys(source)) {
+            if ( key !== "constructor"
+                && key !== "prototype"
+                && key !== "name"
+            ) {
+                let desc = Object.getOwnPropertyDescriptor(source, key);
+                Object.defineProperty(target, key, desc);
+            }
+        }
+    }
+    class Man{
+        work () {
+            console.log("working");
+        }
+    }
+    class Woman{
+        say () {
+            console.log("saying");
+        }
+    }
+
+    let mimix = mix(Man, Woman);
+
+    console.log(new Man());
+
+    console.log(new mimix());
+
+    class SuperMan extends mimix {
+        constructor () {
+            super();
+        }
+    }
+    console.log(new SuperMan());
+
+    /*
+    var sm = new SuperMan();
+    sm.work();
+    sm.say();
+    //实际上它们不存在继承关系， 只是把属性复制到子类上;
+    console.log(sm instanceof Man);
+    console.log(sm instanceof Woman);
+    */
+</script>
+</body>
+</html>
