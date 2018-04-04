@@ -84,6 +84,7 @@ class EBase {
         window.CLASS = this._define.bind(this);
     }
 
+
     /**
      * 添加类名
      * @param dom
@@ -142,6 +143,7 @@ class EBase {
             });
     }
 
+
     /**
      * 在父元素的指定位置插入元素
      * @param obj
@@ -159,7 +161,7 @@ class EBase {
      * @param obj
      * @param children
      */
-    appendBatch(obj, children) {
+    appendBatch(obj, children=[]) {
         children.forEach(v => this.append(obj, v));
         return obj;
     }
@@ -253,6 +255,7 @@ class EBase {
             )
     }
 
+
     /**
      * 首字母大写
      * @param str
@@ -324,6 +327,7 @@ class EBase {
     distinct(arr) {
         return [...new Set(arr)]
     }
+
 
     /**
      * 下载日志
@@ -533,6 +537,7 @@ class EBase {
         return Array.from(dom.classList).some(v => v === clazz)
     }
 
+
     /**
      * 添加文本
      * @param dom
@@ -570,12 +575,10 @@ class EBase {
         );
     }
 
-
     // 交集
     intersect(arr1, arr2) {
         new [...Set([...arr1].filter(x => arr2.has(x)))];
     }
-
 
     /**
      * 加载js
@@ -621,6 +624,7 @@ class EBase {
         }
     }
 
+
     /**
      * 输出日志
      * @param str 日志内容
@@ -658,6 +662,7 @@ class EBase {
     onData(key, value) {
         if (typeof key === "object") this._weakDate.set(key, value);
     }
+
 
     /**
      * 解除事件
@@ -730,6 +735,7 @@ class EBase {
         return type === 'upper' ? rc : rc.toLowerCase();
     }
 
+
     /**
      * 随机数
      * @param minNum
@@ -764,7 +770,7 @@ class EBase {
 
     /**
      * 删除节点
-     * @param obj
+     * @param dom
      */
     remove(dom) {
         dom.parentNode.removeChild(dom);
@@ -788,15 +794,16 @@ class EBase {
     }
 
     /**
-     *
+     * 替换
      * @param str 原字符串
-     * @param findRep {'目标字符':'替换后字符'}
+     * @param findRep{'目标字符':'替换后字符'}
      * @returns {*}
      */
     replaceAll(str, findRep) {
         for (let f in findRep) str = str.replace(new RegExp(f, 'g'), findRep[f])
         return str;
     }
+
 
     /**
      * 加载模块
@@ -824,6 +831,7 @@ class EBase {
         return this._moduleStack.get(className)(option);
     }
 
+
     /**
      * 将完整的html页面的文本形式当做页面打开，并且无法查看源码，没法使用查看元素没法另存为无法刷新没有网址
      * @param html
@@ -841,7 +849,7 @@ class EBase {
      * @param selector
      * @param rules
      */
-    setStyle(selector, rules) {
+    setSheet(selector, rules) {
         let rulesText = selector + '{';
         for (let k in rules)
             rulesText += this.underscored(k) + ':' + rules[k] + ';';
@@ -862,6 +870,7 @@ class EBase {
         else
             this.simple();
     }
+
 
     /**
      * 获取文本的长度，兼容各种码点的长度
@@ -889,7 +898,7 @@ class EBase {
         }).split(';').forEach(v => {
             item = v.split(':');
             let k = this.trim(item[0]);
-            if (type === 'camelize') k = zBase.camelize(k);
+            if (type === 'camelize') k = this.camelize(k);
             ruleObj[k] = this.trim(item[1]);
         });
         return ruleObj;
@@ -922,6 +931,7 @@ class EBase {
         dom.classList.toggle(clazz)
     }
 
+
     /**
      *  去除空白和指定字符串，无参默认去除左右空白
      * @param str
@@ -944,7 +954,7 @@ class EBase {
         } else
             newStr = str.trim();
         return newStr;
-    };
+    }
 
     /**
      * 字符的截断处理
@@ -964,7 +974,7 @@ class EBase {
      * @param selector
      * @param rules
      */
-    updateStyle(selector, rules) {
+    updateSheet(selector, rules) {
         let style = this.getStyleSheet(selector);
         if (style) {
             console.log(this.styleStr2Obj(style.rule));
@@ -1005,6 +1015,7 @@ class EBase {
     union(arr1, arr2) {
         return [...new Set([...arr1, ...arr2])]
     }
+
 
     /**
      * 当前库路径
